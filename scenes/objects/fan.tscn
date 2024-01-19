@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnhvlifxp8oyx"]
+
+[ext_resource type="Texture2D" uid="uid://b02fwe4mrmekq" path="res://graphics/objects/fan.png" id="1_s21xt"]
+[ext_resource type="Script" path="res://scenes/objects/fan.gd" id="1_xiwj4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l1x0l"]
+radius = 78.0064
+
+[node name="Fan" type="StaticBody2D"]
+script = ExtResource("1_xiwj4")
+
+[node name="FanImg" type="Sprite2D" parent="."]
+position = Vector2(1, -9)
+texture = ExtResource("1_s21xt")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_l1x0l")
